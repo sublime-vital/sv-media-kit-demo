@@ -139,6 +139,7 @@
       border-radius: 12px; padding: 16px; margin-bottom: 10px;
       display: flex; gap: 14px; align-items: center;
       position: relative; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(197, 165, 90, 0.08);
     }
     .consumer-hero::before {
       content: ''; position: absolute; top: -20px; right: -20px;
@@ -159,6 +160,7 @@
       border: 1px solid var(--sv-taupe-light);
       display: flex; align-items: center; justify-content: center;
       position: relative; z-index: 1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 3px rgba(197, 165, 90, 0.08);
     }
     .hero-vial img { max-width: 70%; max-height: 85%; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1)); }
 
@@ -172,6 +174,7 @@
       background: var(--sv-white); border: 1px solid var(--sv-taupe-light);
       border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;
       display: flex; gap: 8px; align-items: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .friendly-card-icon { flex-shrink: 0; margin-top: 2px; }
     .friendly-card-text { font-family: var(--font-body); font-size: 10.5px; line-height: 1.55; color: var(--sv-text-secondary); }
@@ -190,6 +193,7 @@
       flex: 1; background: var(--sv-cream); border-radius: 8px;
       padding: 8px 6px; text-align: center;
       border: 1px solid var(--sv-taupe-light);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
     .mechanism-step-number {
       width: 18px; height: 18px; margin: 0 auto 3px;
@@ -215,6 +219,7 @@
       background: linear-gradient(135deg, var(--sv-gold-pale), #F0EBE3);
       border: 1.5px solid var(--sv-gold-light); border-radius: 10px;
       padding: 10px 12px; text-align: center; margin-bottom: 6px;
+      box-shadow: 0 2px 6px rgba(197, 165, 90, 0.1);
     }
     .doctor-cta-text { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 2px; }
     .doctor-cta-sub { font-family: var(--font-body); font-size: 9px; color: var(--sv-text-secondary); font-style: italic; }
@@ -240,73 +245,71 @@
        ============================================ */
 
     /* Research highlight cards */
-    .research-highlights { display: flex; flex-direction: column; gap: 5px; margin-bottom: 8px; }
+    .research-highlights { display: flex; flex-direction: column; gap: 4px; margin-bottom: 7px; }
     .research-highlight {
-      background: var(--sv-cream); border-radius: 8px; padding: 8px 10px;
+      background: var(--sv-cream); border-radius: 8px; padding: 7px 10px;
       border-left: 3px solid var(--sv-gold);
       display: flex; gap: 8px; align-items: flex-start;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     .research-highlight-icon { flex-shrink: 0; margin-top: 2px; }
     .research-highlight-text { flex: 1; }
-    .research-highlight-title { font-family: var(--font-ui); font-size: 9px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 1px; }
-    .research-highlight-body { font-family: var(--font-body); font-size: 9px; color: var(--sv-text-secondary); line-height: 1.45; }
-    .research-highlight-source { font-family: var(--font-mono); font-size: 7px; color: var(--sv-text-muted); margin-top: 2px; }
+    .research-highlight-title { font-family: var(--font-ui); font-size: 8.5px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 1px; }
+    .research-highlight-body { font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary); line-height: 1.4; }
+    .research-highlight-source { font-family: var(--font-mono); font-size: 6.5px; color: var(--sv-text-muted); margin-top: 2px; }
 
-    /* Safety info - consumer friendly */
+    /* Safety info - consumer friendly (warm amber, not alarming) */
     .safety-card {
-      background: #FDF8F3; border: 1px solid var(--sv-rose-light);
-      border-radius: 8px; padding: 8px 10px; margin-bottom: 6px;
+      background: linear-gradient(135deg, #FEFBF5, #FDF6EC); border: 1px solid var(--sv-gold-pale);
+      border-radius: 8px; padding: 7px 10px; margin-bottom: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
-    .safety-card-header { display: flex; align-items: center; gap: 5px; margin-bottom: 4px; }
-    .safety-card-title { font-family: var(--font-ui); font-size: 8px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-rose); }
-    .safety-list { list-style: none; display: flex; flex-direction: column; gap: 3px; }
-    .safety-item { font-family: var(--font-body); font-size: 9px; color: var(--sv-text-secondary); display: flex; align-items: center; gap: 5px; line-height: 1.4; }
-    .safety-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sv-rose); flex-shrink: 0; }
+    .safety-card-header { display: flex; align-items: center; gap: 5px; margin-bottom: 3px; }
+    .safety-card-title { font-family: var(--font-ui); font-size: 7.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-gold-dark); }
+    .safety-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .safety-item { font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary); display: flex; align-items: center; gap: 5px; line-height: 1.35; }
+    .safety-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sv-gold); flex-shrink: 0; }
 
     /* QR gateway - consumer version */
     .qr-gateway {
       background: linear-gradient(135deg, #F8F5F0, var(--sv-gold-pale));
       border: 1.5px solid var(--sv-gold);
-      border-radius: 10px; padding: 12px 14px;
+      border-radius: 10px; padding: 10px 12px;
       display: flex; gap: 10px; align-items: center;
       margin-bottom: 6px;
+      box-shadow: 0 2px 8px rgba(197, 165, 90, 0.1);
     }
     .qr-code-frame {
-      width: 60px; height: 60px; background: var(--sv-white);
+      width: 56px; height: 56px; background: var(--sv-white);
       border-radius: 6px; border: 1px solid var(--sv-taupe-light);
       display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; padding: 3px;
+      flex-shrink: 0; padding: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
-    .qr-placeholder {
-      width: 48px; height: 48px;
-      display: grid; grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(8, 1fr); gap: 1px;
-    }
-    .qr-cell { border-radius: 1px; }
-    .qr-cell.d { background: var(--sv-charcoal); }
-    .qr-cell.l { background: transparent; }
+    .qr-code-frame svg { display: block; }
     .qr-content { flex: 1; }
     .qr-title { font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 2px; }
-    .qr-description { font-family: var(--font-body); font-size: 9px; line-height: 1.45; color: var(--sv-text-secondary); margin-bottom: 2px; }
-    .qr-url { font-family: var(--font-mono); font-size: 7.5px; color: var(--sv-olive); }
+    .qr-description { font-family: var(--font-body); font-size: 8.5px; line-height: 1.4; color: var(--sv-text-secondary); margin-bottom: 2px; }
+    .qr-url { font-family: var(--font-mono); font-size: 7px; color: var(--sv-olive); }
 
     /* Questions to ask card */
     .questions-card {
       background: var(--sv-cream); border-radius: 8px;
-      padding: 8px 10px; margin-bottom: 6px;
+      padding: 7px 10px; margin-bottom: 6px;
       border: 1px solid var(--sv-taupe-light);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
-    .questions-list { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .questions-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
     .question-item {
-      font-family: var(--font-body); font-size: 9px; color: var(--sv-text-secondary);
-      display: flex; align-items: flex-start; gap: 5px; line-height: 1.4;
+      font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary);
+      display: flex; align-items: flex-start; gap: 5px; line-height: 1.35;
     }
     .question-icon { flex-shrink: 0; margin-top: 1px; }
 
     /* Legal */
-    .legal-block { background: var(--sv-linen); border-radius: 5px; padding: 6px 8px; margin-bottom: 4px; }
-    .legal-title { font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-secondary); margin-bottom: 2px; }
-    .legal-text { font-family: var(--font-ui); font-size: 7px; line-height: 1.5; color: var(--sv-text-secondary); }
+    .legal-block { background: var(--sv-linen); border-radius: 5px; padding: 5px 8px; margin-bottom: 3px; }
+    .legal-title { font-family: var(--font-ui); font-size: 6px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-muted); margin-bottom: 1px; }
+    .legal-text { font-family: var(--font-ui); font-size: 6.5px; line-height: 1.45; color: var(--sv-text-secondary); }
 
     .back-footer {
       margin-top: auto; display: flex; justify-content: space-between; align-items: center;
@@ -617,6 +620,11 @@
           <div class="consumer-accent"></div>
           <div class="sheet-inner">
 
+            <!-- Botanical accent (mirrored from front) -->
+            <svg class="botanical-accent" style="bottom: 40px; left: 8px; width: 80px; height: 80px; transform: scaleX(-1);" viewBox="0 0 100 100" fill="none" stroke="#6B7C5E" stroke-width="0.8">
+              <path d="M80 90 C70 70, 50 60, 40 30 M40 30 C35 40, 25 45, 15 42 M40 30 C45 40, 55 42, 60 38 M60 80 C55 65, 48 55, 35 50 M35 50 C32 55, 28 58, 22 56"/>
+            </svg>
+
             <!-- Header -->
             <div class="front-header">
               <div class="logo-lockup">
@@ -652,7 +660,7 @@
               </div>
               <div class="research-highlight">
                 <div class="research-highlight-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A55A" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                 </div>
                 <div class="research-highlight-text">
                   <div class="research-highlight-title">Dual-Action Approach</div>
@@ -665,7 +673,7 @@
             <!-- Safety awareness -->
             <div class="safety-card">
               <div class="safety-card-header">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A9A6" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#A8883D" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <div class="safety-card-title">Things to Know Before You Begin</div>
               </div>
               <ul class="safety-list">
@@ -684,19 +692,19 @@
             <div class="questions-card">
               <ul class="questions-list">
                 <li class="question-item">
-                  <span class="question-icon"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#6B7C5E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="question-icon" style="width: 14px; height: 14px; background: var(--sv-olive); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; color: white; flex-shrink: 0;">1</span>
                   "Is this compound right for my situation?"
                 </li>
                 <li class="question-item">
-                  <span class="question-icon"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#6B7C5E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="question-icon" style="width: 14px; height: 14px; background: var(--sv-olive); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; color: white; flex-shrink: 0;">2</span>
                   "What should I expect when starting?"
                 </li>
                 <li class="question-item">
-                  <span class="question-icon"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#6B7C5E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="question-icon" style="width: 14px; height: 14px; background: var(--sv-olive); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; color: white; flex-shrink: 0;">3</span>
                   "How does this differ from other options?"
                 </li>
                 <li class="question-item">
-                  <span class="question-icon"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#6B7C5E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+                  <span class="question-icon" style="width: 14px; height: 14px; background: var(--sv-olive); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; color: white; flex-shrink: 0;">4</span>
                   "What lifestyle changes should I make alongside?"
                 </li>
               </ul>
@@ -705,20 +713,41 @@
             <!-- QR gateway -->
             <div class="qr-gateway">
               <div class="qr-code-frame">
-                <div class="qr-placeholder">
-                  <div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div>
-                  <div class="qr-cell l"></div><div class="qr-cell l"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell l"></div><div class="qr-cell l"></div><div class="qr-cell d"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell l"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell l"></div>
-                  <div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell l"></div><div class="qr-cell d"></div><div class="qr-cell d"></div><div class="qr-cell d"></div>
-                </div>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <!-- Top-left finder -->
+                  <rect x="2" y="2" width="14" height="14" rx="2" stroke="#2D2D2D" stroke-width="2.5" fill="none"/>
+                  <rect x="5" y="5" width="8" height="8" rx="1" fill="#2D2D2D"/>
+                  <!-- Top-right finder -->
+                  <rect x="32" y="2" width="14" height="14" rx="2" stroke="#2D2D2D" stroke-width="2.5" fill="none"/>
+                  <rect x="35" y="5" width="8" height="8" rx="1" fill="#2D2D2D"/>
+                  <!-- Bottom-left finder -->
+                  <rect x="2" y="32" width="14" height="14" rx="2" stroke="#2D2D2D" stroke-width="2.5" fill="none"/>
+                  <rect x="5" y="35" width="8" height="8" rx="1" fill="#2D2D2D"/>
+                  <!-- Data modules -->
+                  <rect x="19" y="3" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="25" y="5" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="19" y="9" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="3" y="19" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="9" y="19" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="19" y="19" width="3" height="3" rx="0.5" fill="#6B7C5E"/>
+                  <rect x="25" y="19" width="3" height="3" rx="0.5" fill="#6B7C5E"/>
+                  <rect x="22" y="22" width="4" height="4" rx="0.5" fill="#C5A55A"/>
+                  <rect x="19" y="25" width="3" height="3" rx="0.5" fill="#6B7C5E"/>
+                  <rect x="28" y="25" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="35" y="19" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="41" y="19" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="19" y="35" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="25" y="32" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="19" y="41" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="32" y="32" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="38" y="35" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="35" y="41" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                  <rect x="41" y="38" width="3" height="3" rx="0.5" fill="#2D2D2D"/>
+                </svg>
               </div>
               <div class="qr-content">
                 <div class="qr-title">Learn More</div>
-                <div class="qr-description">Scan for detailed educational information, published research, and safety details.</div>
+                <div class="qr-description">Scan for educational information, published research, and safety details.</div>
                 <div class="qr-url">sublimevital.com/learn/tirzepatide</div>
               </div>
             </div>
