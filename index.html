@@ -315,23 +315,24 @@
     /* Specs strip */
     .specs-strip {
       display: flex; background: var(--sv-warm-black);
-      border-radius: 7px; overflow: hidden; margin-bottom: 8px;
-      padding: 0 4px;
+      border-radius: 7px; margin-bottom: 8px;
     }
 
     .spec-cell {
-      flex: 1; padding: 7px 6px; text-align: center;
+      flex: 1; padding: 8px 10px; text-align: center;
       border-right: 1px solid #333;
     }
-    .spec-cell:last-child { border-right: none; }
+    .spec-cell:first-child { padding-left: 12px; }
+    .spec-cell:last-child { border-right: none; padding-right: 12px; }
 
     .spec-cell-label {
-      font-family: var(--font-ui); font-size: 6.5px; font-weight: 600;
+      font-family: var(--font-ui); font-size: 7px; font-weight: 600;
       letter-spacing: 0.06em; text-transform: uppercase; color: var(--sv-gold);
+      margin-bottom: 1px;
     }
 
     .spec-cell-value {
-      font-family: var(--font-mono); font-size: 10px; font-weight: 500; color: var(--sv-white);
+      font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; color: var(--sv-white);
     }
 
     /* Variants */
