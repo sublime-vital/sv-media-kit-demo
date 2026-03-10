@@ -254,9 +254,9 @@
     }
     .research-highlight-icon { flex-shrink: 0; margin-top: 2px; }
     .research-highlight-text { flex: 1; }
-    .research-highlight-title { font-family: var(--font-ui); font-size: 8.5px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 1px; }
-    .research-highlight-body { font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary); line-height: 1.4; }
-    .research-highlight-source { font-family: var(--font-mono); font-size: 6.5px; color: var(--sv-text-muted); margin-top: 2px; }
+    .research-highlight-title { font-family: var(--font-ui); font-size: 9.5px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 1px; }
+    .research-highlight-body { font-family: var(--font-body); font-size: 9.5px; color: var(--sv-text-secondary); line-height: 1.45; }
+    .research-highlight-source { font-family: var(--font-mono); font-size: 7.5px; color: var(--sv-text-muted); margin-top: 2px; }
 
     /* Safety info - consumer friendly (warm amber, not alarming) */
     .safety-card {
@@ -265,9 +265,9 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
     .safety-card-header { display: flex; align-items: center; gap: 5px; margin-bottom: 3px; }
-    .safety-card-title { font-family: var(--font-ui); font-size: 7.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-gold-dark); }
-    .safety-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .safety-item { font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary); display: flex; align-items: center; gap: 5px; line-height: 1.35; }
+    .safety-card-title { font-family: var(--font-ui); font-size: 8.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-gold-dark); }
+    .safety-list { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .safety-item { font-family: var(--font-body); font-size: 9.5px; color: var(--sv-text-secondary); display: flex; align-items: center; gap: 5px; line-height: 1.4; }
     .safety-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sv-gold); flex-shrink: 0; }
 
     /* QR gateway - consumer version */
@@ -289,8 +289,8 @@
     .qr-code-frame svg { display: block; }
     .qr-content { flex: 1; }
     .qr-title { font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 2px; }
-    .qr-description { font-family: var(--font-body); font-size: 8.5px; line-height: 1.4; color: var(--sv-text-secondary); margin-bottom: 2px; }
-    .qr-url { font-family: var(--font-mono); font-size: 7px; color: var(--sv-olive); }
+    .qr-description { font-family: var(--font-body); font-size: 9.5px; line-height: 1.45; color: var(--sv-text-secondary); margin-bottom: 2px; }
+    .qr-url { font-family: var(--font-mono); font-size: 8px; color: var(--sv-olive); }
 
     /* Questions to ask card */
     .questions-card {
@@ -299,17 +299,17 @@
       border: 1px solid var(--sv-taupe-light);
       box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
-    .questions-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .questions-list { list-style: none; display: flex; flex-direction: column; gap: 3px; }
     .question-item {
-      font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary);
-      display: flex; align-items: flex-start; gap: 5px; line-height: 1.35;
+      font-family: var(--font-body); font-size: 9.5px; color: var(--sv-text-secondary);
+      display: flex; align-items: flex-start; gap: 5px; line-height: 1.4;
     }
     .question-icon { flex-shrink: 0; margin-top: 1px; }
 
     /* Legal */
     .legal-block { background: var(--sv-linen); border-radius: 5px; padding: 5px 8px; margin-bottom: 3px; }
-    .legal-title { font-family: var(--font-ui); font-size: 6px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-muted); margin-bottom: 1px; }
-    .legal-text { font-family: var(--font-ui); font-size: 6.5px; line-height: 1.45; color: var(--sv-text-secondary); }
+    .legal-title { font-family: var(--font-ui); font-size: 6.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-muted); margin-bottom: 1px; }
+    .legal-text { font-family: var(--font-ui); font-size: 7.5px; line-height: 1.5; color: var(--sv-text-secondary); }
 
     .back-footer {
       margin-top: auto; display: flex; justify-content: space-between; align-items: center;
@@ -653,9 +653,9 @@
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A55A" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
                 <div class="research-highlight-text">
-                  <div class="research-highlight-title">Studied in Large Clinical Trials</div>
-                  <div class="research-highlight-body">Researchers evaluated this compound in two major trial programs involving thousands of participants.</div>
-                  <div class="research-highlight-source">Published in New England Journal of Medicine, 2022</div>
+                  <div class="research-highlight-title">Studied in Major Clinical Trials</div>
+                  <div class="research-highlight-body">Evaluated in two large trial programs with thousands of participants.</div>
+                  <div class="research-highlight-source">N Engl J Med, 2022</div>
                 </div>
               </div>
               <div class="research-highlight">
@@ -664,8 +664,8 @@
                 </div>
                 <div class="research-highlight-text">
                   <div class="research-highlight-title">Dual-Action Approach</div>
-                  <div class="research-highlight-body">Works through two pathways (GIP and GLP-1), which researchers have studied in peer-reviewed clinical trials.</div>
-                  <div class="research-highlight-source">JCI Insight, 2020 &bull; Peer-reviewed</div>
+                  <div class="research-highlight-body">Works through two pathways (GIP and GLP-1) studied in peer-reviewed trials.</div>
+                  <div class="research-highlight-source">JCI Insight, 2020</div>
                 </div>
               </div>
             </div>
@@ -747,7 +747,7 @@
               </div>
               <div class="qr-content">
                 <div class="qr-title">Learn More</div>
-                <div class="qr-description">Scan for educational information, published research, and safety details.</div>
+                <div class="qr-description">Scan for research, safety info, and prescriber resources.</div>
                 <div class="qr-url">sublimevital.com/learn/tirzepatide</div>
               </div>
             </div>
@@ -756,7 +756,7 @@
             <div class="legal-block">
               <div class="legal-title">Important Notice</div>
               <div class="legal-text">
-                This information is for educational purposes only and does not constitute medical advice. This compound requires a valid prescription from a licensed healthcare provider. It is prepared by a licensed compounding pharmacy and is not an FDA-approved product. Always consult your healthcare provider before starting any new medication.
+                For educational purposes only; not medical advice. Requires a valid prescription. Prepared by a licensed compounding pharmacy; not an FDA-approved product. Consult your healthcare provider before starting any medication.
               </div>
             </div>
 
