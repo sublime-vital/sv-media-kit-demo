@@ -316,21 +316,22 @@
     .specs-strip {
       display: flex; background: var(--sv-warm-black);
       border-radius: 7px; overflow: hidden; margin-bottom: 8px;
+      padding: 0 4px;
     }
 
     .spec-cell {
-      flex: 1; padding: 7px 4px; text-align: center;
+      flex: 1; padding: 7px 6px; text-align: center;
       border-right: 1px solid #333;
     }
     .spec-cell:last-child { border-right: none; }
 
     .spec-cell-label {
-      font-family: var(--font-ui); font-size: 7px; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-gold);
+      font-family: var(--font-ui); font-size: 6.5px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--sv-gold);
     }
 
     .spec-cell-value {
-      font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--sv-white);
+      font-family: var(--font-mono); font-size: 10px; font-weight: 500; color: var(--sv-white);
     }
 
     /* Variants */
@@ -397,7 +398,7 @@
 
     .lifestyle-quote {
       font-family: var(--font-body); font-size: 11px;
-      font-style: italic; color: var(--sv-taupe-light); line-height: 1.5;
+      font-style: italic; color: #E8E2D8; line-height: 1.5;
     }
 
     .lifestyle-attr {
@@ -424,15 +425,15 @@
 
     .storage-title {
       font-family: var(--font-ui); font-size: 7.5px; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-text-secondary);
     }
 
     .storage-value {
-      font-family: var(--font-mono); font-size: 10px; font-weight: 500; color: var(--sv-charcoal);
+      font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--sv-charcoal);
     }
 
     .storage-sub {
-      font-family: var(--font-body); font-size: 8px; color: var(--sv-text-muted);
+      font-family: var(--font-body); font-size: 8px; color: var(--sv-text-secondary);
     }
 
     /* Research */
@@ -459,7 +460,7 @@
     .research-description {
       flex: 1;
       font-family: var(--font-body); font-size: 10px; line-height: 1.45;
-      color: var(--sv-taupe-light);
+      color: #E0DAD0;
     }
 
     /* Citations */
@@ -478,10 +479,10 @@
     }
 
     .citation-text {
-      font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text-secondary); line-height: 1.35;
+      font-family: var(--font-body); font-size: 8.5px; color: var(--sv-text); line-height: 1.35;
     }
 
-    .citation-journal { font-style: italic; color: var(--sv-text-muted); }
+    .citation-journal { font-style: italic; color: var(--sv-text-secondary); }
 
     /* QR gateway */
     .qr-gateway {
@@ -547,12 +548,12 @@
 
     .legal-title {
       font-family: var(--font-ui); font-size: 6.5px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-muted);
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--sv-text-secondary);
       margin-bottom: 2px;
     }
 
     .legal-text {
-      font-family: var(--font-ui); font-size: 7px; line-height: 1.5; color: var(--sv-text-muted);
+      font-family: var(--font-ui); font-size: 7px; line-height: 1.5; color: var(--sv-text-secondary);
     }
 
     .back-footer {
@@ -561,8 +562,8 @@
       padding-top: 3px; border-top: 1px solid var(--sv-taupe-light);
     }
 
-    .back-footer-left { font-family: var(--font-ui); font-size: 7.5px; color: var(--sv-text-muted); }
-    .back-footer-right { font-family: var(--font-mono); font-size: 6px; color: var(--sv-taupe); }
+    .back-footer-left { font-family: var(--font-ui); font-size: 7.5px; color: var(--sv-text-secondary); }
+    .back-footer-right { font-family: var(--font-mono); font-size: 6px; color: var(--sv-text-muted); }
 
     /* ============================================
        PHONE MOCKUP (unchanged from before)
@@ -634,8 +635,21 @@
     .monograph-compound { font-family: var(--font-display); font-size: 24px; font-weight: 700; margin-bottom: 3px; }
     .monograph-class { font-family: var(--font-body); font-size: 11px; color: var(--sv-gold); font-style: italic; }
     .monograph-tabs { display: flex; border-bottom: 2px solid var(--sv-taupe-light); margin-bottom: 14px; }
-    .monograph-tab { padding: 7px 10px; font-family: var(--font-ui); font-size: 9px; font-weight: 600; color: var(--sv-text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .monograph-tab { padding: 7px 8px; font-family: var(--font-ui); font-size: 8px; font-weight: 600; color: var(--sv-text-muted); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+    .monograph-tab:hover { color: var(--sv-text-secondary); }
     .monograph-tab.active { color: var(--sv-gold-dark); border-bottom-color: var(--sv-gold); }
+    .mono-tab-content { display: none; }
+    .mono-tab-content.active { display: block; }
+    .mono-resource-card { background: var(--sv-cream); border: 1px solid var(--sv-taupe-light); border-radius: 10px; padding: 12px; margin-bottom: 8px; display: flex; gap: 10px; align-items: center; }
+    .mono-resource-thumb { width: 48px; height: 67px; background: var(--sv-white); border: 1px solid var(--sv-taupe-light); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; position: relative; }
+    .mono-resource-thumb::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--sv-gold); }
+    .mono-resource-info { flex: 1; }
+    .mono-resource-title { font-family: var(--font-ui); font-size: 11px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 2px; }
+    .mono-resource-meta { font-family: var(--font-ui); font-size: 8px; color: var(--sv-text-muted); margin-bottom: 4px; }
+    .mono-resource-actions { display: flex; gap: 6px; }
+    .mono-resource-btn { padding: 4px 10px; border-radius: 5px; font-family: var(--font-ui); font-size: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 3px; }
+    .mono-resource-btn.primary { background: var(--sv-gold); color: white; }
+    .mono-resource-btn.secondary { background: var(--sv-cream); border: 1px solid var(--sv-taupe-light); color: var(--sv-text-secondary); }
     .mono-sect { font-family: var(--font-ui); font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sv-charcoal); margin-bottom: 6px; }
     .mono-text { font-family: var(--font-body); font-size: 12px; line-height: 1.55; color: var(--sv-text-secondary); margin-bottom: 14px; }
     .mono-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
@@ -1249,35 +1263,183 @@
               <div class="monograph-class">Dual GIP/GLP-1 Receptor Agonist</div>
             </div>
 
-            <div class="monograph-tabs">
-              <div class="monograph-tab active">Overview</div>
-              <div class="monograph-tab">Evidence</div>
-              <div class="monograph-tab">Calculator</div>
-              <div class="monograph-tab">Safety</div>
+            <div class="monograph-tabs" id="monoTabs">
+              <div class="monograph-tab active" onclick="switchTab('overview')">Overview</div>
+              <div class="monograph-tab" onclick="switchTab('evidence')">Evidence</div>
+              <div class="monograph-tab" onclick="switchTab('calculator')">Calculator</div>
+              <div class="monograph-tab" onclick="switchTab('safety')">Safety</div>
+              <div class="monograph-tab" onclick="switchTab('resources')">Resources</div>
             </div>
 
-            <div class="mono-sect">Mechanism of Action</div>
-            <div class="mono-text">
-              Tirzepatide is an imbalanced and biased dual agonist that co-activates GIP and GLP-1 receptors. Published research describes interactions with glucose-dependent insulin secretion pathways, glucagon signaling, and gastric motility mechanisms.
+            <!-- TAB: Overview -->
+            <div class="mono-tab-content active" id="tab-overview">
+              <div class="mono-sect">Mechanism of Action</div>
+              <div class="mono-text">
+                Tirzepatide is an imbalanced and biased dual agonist that co-activates GIP and GLP-1 receptors. Published research describes interactions with glucose-dependent insulin secretion pathways, glucagon signaling, and gastric motility mechanisms.
+              </div>
+
+              <div class="mono-sect">Key Pharmacology</div>
+              <div class="mono-grid">
+                <div class="mono-card"><div class="mono-card-label">Half-Life</div><div class="mono-card-value">~5 days</div></div>
+                <div class="mono-card"><div class="mono-card-label">Dosing</div><div class="mono-card-value">QW SubQ</div></div>
+                <div class="mono-card"><div class="mono-card-label">Escalation</div><div class="mono-card-value">q4 weeks</div></div>
+                <div class="mono-card"><div class="mono-card-label">Binding</div><div class="mono-card-value">High (C20 FA)</div></div>
+              </div>
+
+              <div class="mono-cta">
+                <div class="mono-cta-title">Ready to place an order?</div>
+                <div class="mono-cta-text">Access the full catalog, pricing, and calculator.</div>
+                <a class="mono-cta-btn" href="#">Open Physician Portal</a>
+              </div>
             </div>
 
-            <div class="mono-sect">Key Pharmacology</div>
-            <div class="mono-grid">
-              <div class="mono-card"><div class="mono-card-label">Half-Life</div><div class="mono-card-value">~5 days</div></div>
-              <div class="mono-card"><div class="mono-card-label">Dosing</div><div class="mono-card-value">QW SubQ</div></div>
-              <div class="mono-card"><div class="mono-card-label">Escalation</div><div class="mono-card-value">q4 weeks</div></div>
-              <div class="mono-card"><div class="mono-card-label">Binding</div><div class="mono-card-value">High (C20 FA)</div></div>
+            <!-- TAB: Evidence -->
+            <div class="mono-tab-content" id="tab-evidence">
+              <div class="mono-sect">Clinical Trial Programs</div>
+              <div class="mono-grid">
+                <div class="mono-card"><div class="mono-card-label">Program</div><div class="mono-card-value">SURPASS</div></div>
+                <div class="mono-card"><div class="mono-card-label">Indication</div><div class="mono-card-value">T2D</div></div>
+                <div class="mono-card"><div class="mono-card-label">Program</div><div class="mono-card-value">SURMOUNT</div></div>
+                <div class="mono-card"><div class="mono-card-label">Indication</div><div class="mono-card-value">CWM</div></div>
+              </div>
+
+              <div class="mono-sect">Published Citations</div>
+              <div style="background: var(--sv-cream); border-radius: 8px; padding: 10px; margin-bottom: 10px;">
+                <div style="font-family: var(--font-ui); font-size: 9px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 4px;">[1] Jastreboff AM, et al.</div>
+                <div style="font-family: var(--font-body); font-size: 10px; color: var(--sv-text-secondary); font-style: italic;">N Engl J Med, 2022</div>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--sv-gold-dark); margin-top: 2px;">DOI: 10.1056/NEJMoa2206038</div>
+              </div>
+              <div style="background: var(--sv-cream); border-radius: 8px; padding: 10px; margin-bottom: 10px;">
+                <div style="font-family: var(--font-ui); font-size: 9px; font-weight: 600; color: var(--sv-charcoal); margin-bottom: 4px;">[2] Willard FS, et al.</div>
+                <div style="font-family: var(--font-body); font-size: 10px; color: var(--sv-text-secondary); font-style: italic;">JCI Insight, 2020</div>
+                <div style="font-family: var(--font-mono); font-size: 8px; color: var(--sv-gold-dark); margin-top: 2px;">PMID: 32730231</div>
+              </div>
+
+              <div class="mono-text" style="font-size: 10px; font-style: italic;">
+                Published results reported body weight data across dose cohorts (SURMOUNT-1) and HbA1c data in T2D populations (SURPASS). Findings are attributed to the cited researchers.
+              </div>
             </div>
 
-            <div class="mono-sect">Published Trial Data</div>
-            <div class="mono-text" style="font-size: 11px;">
-              SURMOUNT-1 (NEJM 2022): Published results reported body weight data across dose cohorts. SURPASS: Published HbA1c data in T2D populations. Full citations in Evidence tab.
+            <!-- TAB: Calculator -->
+            <div class="mono-tab-content" id="tab-calculator">
+              <div class="mono-sect">Reconstitution Calculator</div>
+              <div class="mono-text" style="font-size: 11px;">
+                Calculate precise reconstitution volumes and resulting concentrations for your prescribed protocol.
+              </div>
+
+              <div class="mono-grid">
+                <div class="mono-card"><div class="mono-card-label">Vial Strength</div><div class="mono-card-value">30mg</div></div>
+                <div class="mono-card"><div class="mono-card-label">BAC Water</div><div class="mono-card-value">1.5 mL</div></div>
+                <div class="mono-card"><div class="mono-card-label">Concentration</div><div class="mono-card-value">20 mg/mL</div></div>
+                <div class="mono-card"><div class="mono-card-label">Doses/Vial</div><div class="mono-card-value">~12</div></div>
+              </div>
+
+              <div style="background: var(--sv-cream); border-left: 3px solid var(--sv-gold); border-radius: 8px; padding: 10px; margin-bottom: 10px;">
+                <div style="font-family: var(--font-body); font-size: 10px; color: var(--sv-text-secondary); line-height: 1.5;">
+                  The full interactive calculator with adjustable BAC water volume and dose units is available in the Physician Portal.
+                </div>
+              </div>
+
+              <div class="mono-cta">
+                <div class="mono-cta-title">Full Calculator</div>
+                <div class="mono-cta-text">Adjustable volumes, dose units, and protocol saving.</div>
+                <a class="mono-cta-btn" href="#">Open in Portal</a>
+              </div>
             </div>
 
-            <div class="mono-cta">
-              <div class="mono-cta-title">Ready to place an order?</div>
-              <div class="mono-cta-text">Access the full catalog, pricing, and calculator.</div>
-              <a class="mono-cta-btn" href="#">Open Physician Portal</a>
+            <!-- TAB: Safety -->
+            <div class="mono-tab-content" id="tab-safety">
+              <div class="mono-sect">Published Safety Profile</div>
+              <div class="mono-text" style="font-size: 11px;">
+                The following safety data is sourced from published clinical trial literature and prescribing information for the reference listed drug.
+              </div>
+
+              <div class="mono-sect">Reported Side Effects (Published Literature)</div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between; padding: 6px 8px; background: var(--sv-cream); border-radius: 6px;">
+                  <span style="font-family: var(--font-ui); font-size: 10px; color: var(--sv-charcoal);">Nausea</span>
+                  <span style="font-family: var(--font-ui); font-size: 9px; color: var(--sv-text-muted);">Common during escalation</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 6px 8px; background: var(--sv-cream); border-radius: 6px;">
+                  <span style="font-family: var(--font-ui); font-size: 10px; color: var(--sv-charcoal);">Diarrhea</span>
+                  <span style="font-family: var(--font-ui); font-size: 9px; color: var(--sv-text-muted);">Common</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 6px 8px; background: var(--sv-cream); border-radius: 6px;">
+                  <span style="font-family: var(--font-ui); font-size: 10px; color: var(--sv-charcoal);">Vomiting</span>
+                  <span style="font-family: var(--font-ui); font-size: 9px; color: var(--sv-text-muted);">Less frequent</span>
+                </div>
+              </div>
+
+              <div style="background: var(--sv-cream); border-left: 3px solid #C44B3C; border-radius: 8px; padding: 10px;">
+                <div style="font-family: var(--font-ui); font-size: 8px; font-weight: 700; color: #C44B3C; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;">Safety Note</div>
+                <div style="font-family: var(--font-body); font-size: 10px; color: var(--sv-text-secondary); line-height: 1.5;">
+                  Published literature notes that GI side effects may be milder with dual agonists at comparable receptor engagement levels due to the imbalanced binding profile. Consult full prescribing information for the reference listed drug.
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB: Resources -->
+            <div class="mono-tab-content" id="tab-resources">
+              <div class="mono-sect">Product Sheet Downloads</div>
+              <div class="mono-text" style="font-size: 11px;">
+                Download or share the Tirzepatide product sheet. Available as high-resolution PNG for digital sharing or print-ready PDF.
+              </div>
+
+              <div class="mono-resource-card">
+                <div class="mono-resource-thumb">
+                  <svg width="20" height="20" viewBox="0 20 40 60" fill="#C5A55A"><path d="M29.88 35.94 c1.02 -0.36 2.7 -1.26 3.12 -3.18 c0.48 -2.28 -0.6 -3.84 -3.36 -4.32 c-3.06 -0.54 -9.3 0.54 -15.18 3.3 c-5.04 2.4 -10.32 6.06 -11.28 10.2 c-0.9 4.14 1.14 7.38 7.08 12.9 c1.74 1.62 3.24 3.06 4.5 4.38 c6.54 -2.64 19.08 -6.18 20.52 -6.48 c1.56 -0.36 1.86 0.36 0.24 0.66 c-1.38 0.3 -13.26 3.72 -19.98 6.6 c4.62 4.86 6.18 7.98 5.58 11.82 c-0.72 4.8 -6.66 7.5 -12.84 6.9 c-5.94 -0.54 -8.7 -4.02 -8.16 -7.2 c0.78 -4.2 6.18 -8.04 12.06 -11.1 c0.36 -0.24 0.9 -0.42 1.38 -0.66 c-1.14 -1.2 -2.58 -2.58 -4.14 -4.14 c-6.6 -6.24 -8.88 -9.48 -7.92 -13.92 s4.62 -7.8 12.24 -11.16 c7.68 -3.42 12.9 -3.78 16.14 -3.24 c3.54 0.6 4.86 2.94 4.26 5.76 c-0.6 2.52 -3.18 3.78 -3.9 3.84 c-0.72 0.12 -1.08 -0.66 -0.36 -0.96 z M19.74 71.52 c0.48 -3 -0.6 -5.76 -5.4 -10.98 c-0.54 0.24 -0.96 0.48 -1.38 0.72 c-7.38 4.02 -10.98 7.02 -11.58 10.26 c-0.48 2.76 2.04 5.46 6.96 5.82 c6 0.36 10.8 -2.46 11.4 -5.82 z"/></svg>
+                </div>
+                <div class="mono-resource-info">
+                  <div class="mono-resource-title">Product Sheet &mdash; Front</div>
+                  <div class="mono-resource-meta">5" &times; 7" &bull; High-res PNG &bull; 1500 &times; 2100px</div>
+                  <div class="mono-resource-actions">
+                    <a class="mono-resource-btn primary" href="#">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      PNG
+                    </a>
+                    <a class="mono-resource-btn secondary" href="#">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mono-resource-card">
+                <div class="mono-resource-thumb">
+                  <svg width="20" height="20" viewBox="0 20 40 60" fill="#C5A55A"><path d="M29.88 35.94 c1.02 -0.36 2.7 -1.26 3.12 -3.18 c0.48 -2.28 -0.6 -3.84 -3.36 -4.32 c-3.06 -0.54 -9.3 0.54 -15.18 3.3 c-5.04 2.4 -10.32 6.06 -11.28 10.2 c-0.9 4.14 1.14 7.38 7.08 12.9 c1.74 1.62 3.24 3.06 4.5 4.38 c6.54 -2.64 19.08 -6.18 20.52 -6.48 c1.56 -0.36 1.86 0.36 0.24 0.66 c-1.38 0.3 -13.26 3.72 -19.98 6.6 c4.62 4.86 6.18 7.98 5.58 11.82 c-0.72 4.8 -6.66 7.5 -12.84 6.9 c-5.94 -0.54 -8.7 -4.02 -8.16 -7.2 c0.78 -4.2 6.18 -8.04 12.06 -11.1 c0.36 -0.24 0.9 -0.42 1.38 -0.66 c-1.14 -1.2 -2.58 -2.58 -4.14 -4.14 c-6.6 -6.24 -8.88 -9.48 -7.92 -13.92 s4.62 -7.8 12.24 -11.16 c7.68 -3.42 12.9 -3.78 16.14 -3.24 c3.54 0.6 4.86 2.94 4.26 5.76 c-0.6 2.52 -3.18 3.78 -3.9 3.84 c-0.72 0.12 -1.08 -0.66 -0.36 -0.96 z M19.74 71.52 c0.48 -3 -0.6 -5.76 -5.4 -10.98 c-0.54 0.24 -0.96 0.48 -1.38 0.72 c-7.38 4.02 -10.98 7.02 -11.58 10.26 c-0.48 2.76 2.04 5.46 6.96 5.82 c6 0.36 10.8 -2.46 11.4 -5.82 z"/></svg>
+                </div>
+                <div class="mono-resource-info">
+                  <div class="mono-resource-title">Product Sheet &mdash; Back</div>
+                  <div class="mono-resource-meta">5" &times; 7" &bull; High-res PNG &bull; 1500 &times; 2100px</div>
+                  <div class="mono-resource-actions">
+                    <a class="mono-resource-btn primary" href="#">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      PNG
+                    </a>
+                    <a class="mono-resource-btn secondary" href="#">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mono-resource-card">
+                <div class="mono-resource-thumb" style="background: var(--sv-charcoal);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A55A" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div class="mono-resource-info">
+                  <div class="mono-resource-title">Print-Ready PDF (Both Sides)</div>
+                  <div class="mono-resource-meta">5" &times; 7" &bull; 16pt cardstock &bull; Bleed + crop marks</div>
+                  <div class="mono-resource-actions">
+                    <a class="mono-resource-btn primary" href="#">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1449,6 +1611,21 @@
   </div>
 
 </div>
+
+<script>
+function switchTab(tabId) {
+  // Deactivate all tabs and content
+  document.querySelectorAll('.monograph-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.mono-tab-content').forEach(c => c.classList.remove('active'));
+  // Activate selected
+  document.getElementById('tab-' + tabId).classList.add('active');
+  // Find the tab button by matching text
+  const tabNames = { overview: 'Overview', evidence: 'Evidence', calculator: 'Calculator', safety: 'Safety', resources: 'Resources' };
+  document.querySelectorAll('.monograph-tab').forEach(t => {
+    if (t.textContent.trim() === tabNames[tabId]) t.classList.add('active');
+  });
+}
+</script>
 
 </body>
 </html>
